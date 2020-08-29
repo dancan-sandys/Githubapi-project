@@ -1,1 +1,9 @@
 <p>{{profiles.login}}</p>
+<div><img src="{{profiles.avatar_url}}" alt=""></div>
+<div>
+    <p class="card">Works at: {{profiles.company}}</p>
+</div>
+
+<div *ngIf='profiles.hireable'>
+    <p>Available for higher</p>
+</div>

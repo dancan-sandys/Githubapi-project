@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileFinderService } from '../profile-finder.service';
+import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-profile',
@@ -8,15 +9,17 @@ import { ProfileFinderService } from '../profile-finder.service';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private githubProfiles: ProfileFinderService) { }
+  constructor(private githubProfiles: ProfileFinderService , http : HttpClient) { }
 
   public profiles: any = {};
 
+  public repos : any;
+
   ngOnInit(){
 
-    this.githubProfiles.getGithub().subscribe((response) => {console.log(response) ; this.profiles = response })
+    this.githubProfiles.getGithub().subscribe((response:any) => {console.log(response.repos_url) ; this.profiles = response  ; this.repos = this.http.})
 
-    
+  
 
   }
 
