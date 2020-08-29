@@ -9,17 +9,17 @@ import { HttpClient } from '@angular/common/http'
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private githubProfiles: ProfileFinderService , http : HttpClient) { }
+  constructor(private githubProfiles: ProfileFinderService, private http: HttpClient) { }
 
   public profiles: any = {};
 
-  public repos : any;
+  public repos: any;
 
-  ngOnInit(){
+  ngOnInit() {
 
-    this.githubProfiles.getGithub().subscribe((response:any) => {console.log(response.repos_url) ; this.profiles = response  ; this.repos = this.http.})
+    this.githubProfiles.getGithub().subscribe((response: {}) => { console.log(response); this.profiles = response })
 
-  
+   
 
   }
 
