@@ -7,3 +7,7 @@
 <div *ngIf='profiles.hireable'>
     <p>Available for higher</p>
 </div>
+
+<div class="repos" *ngFor="let repo of repos">
+    <p>{{repo.name}}</p>
+</div>
