@@ -17,13 +17,16 @@ export class ProfileComponent implements OnInit {
 
   public repos: any;
 
+  Profiles:UserProfile = (this.profiles.login, this.profiles.name, this.profiles.company, this.profiles.email, this.profiles.location, this.profiles.created_at, this.profiles.email)
+
   search(searchterm) {
     if (searchterm != '') {
-      this.githubProfiles.getGithub(searchterm).subscribe((response: {}) => { console.log(response); this.profiles = response })
+      this.githubProfiles.getGithub(searchterm).subscribe((response: {}) => { console.log(response); this.profiles = response; })
 
       this.githubRepos.getRepos(searchterm).subscribe((response: {}) => { this.repos = response; console.log(response) })
      
-      alert( this.profiles.login )
+      console.log('Any', this.Profiles) 
+     
     }
 
     else{
