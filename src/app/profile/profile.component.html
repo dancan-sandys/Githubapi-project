@@ -1,24 +1,4 @@
-<!-- <div> <input type="text" class="searchbutton" placeholder="search" #name (keyup.enter)='search(name.value)'></div> -->
-
-<div *ngIf='profiles.avatar_url' class="row profile">
-
-    <div class="col-md-6 "><img class="profilephoto" src="{{profiles.avatar_url}}" alt=""></div>
-    <div class="col-md-6 card profilecard">
-        <div>
-            <p class="panel-heading">Username: {{profiles.login}}</p>
-            <p class="panel-heading"> Name: {{profiles.name}}</p>
-            <p *ngIf='profiles.company'>Works at: {{profiles.company}}</p>
-            <p class="panel-heading">Email Address: {{profiles.email}}</p>
-            <p class="panel-heading">Location: {{profiles.location}}</p>
-            <p class="panel-heading">Github user since: {{profiles.created_at}}</p>
-            <p class="panel-heading">{{profiles.login}} has {{profiles.created_at|TimeCountPipe}} hours of github experience.</p>
-        </div>
-
-        <div *ngIf='profiles.hireable'>
-            <p>Available for higher</p>
-        </div>
-    </div>
-</div>
-<div class="repos" *ngFor="let repo of repos">
-    <p>{{repo.name}}</p>
+<p>Profile works</p>
+<div>
+    <img src="{{profiles.avatar_url}}" alt="{{profiles.name}}">
 </div>

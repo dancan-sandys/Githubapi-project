@@ -1,35 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProfileFinderService } from '../profile-finder.service';
-import { HttpClient } from '@angular/common/http'
-import { ReposfinderService } from '../reposfinder.service'
-import { UserProfile } from '../user-profile'
-import { Repos } from '../repos'
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit, OnDestroy {
+
+  subscription: Subscription;
+
+  profiles: any;
+
+  constructor(private findProfile: ProfileFinderService) {
 
 
-  public profiles: any = {};
-
-  public repos: any;
-
-  Profiles: UserProfile = (this.profiles.login, this.profiles.name, this.profiles.company, this.profiles.email, this.profiles.location, this.profiles.created_at, this.profiles.email)
-
-  Repos: Repos = (this.repos);
-
-  constructor(private githubProfiles: ProfileFinderService, private http: HttpClient, private githubRepos: ReposfinderService) { 
   }
-
-
- 
 
   ngOnInit() {
-    this.githubProfiles.getProfile.subscribe((response) => {this.profiles = response})
+
+    this.subscription = this.findProfile.getProfile.subscribe((response) => { this.profiles = response; console.log(response); console.log(`Hello`, this.profiles) })
 
   }
 
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }
