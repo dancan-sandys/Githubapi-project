@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProfileFinderService } from '../profile-finder.service';
 import { Subscription } from 'rxjs';
-
+import {TimeCountPipe } from '../time-count.pipe'
 
 @Component({
   selector: 'app-profile',

@@ -1,4 +1,19 @@
-<p>Profile works</p>
-<div>
-    <img src="{{profiles.avatar_url}}" alt="{{profiles.name}}">
+<div class="row" *ngIf='profiles.login'>
+    <div class="col-md-6">
+        <img class="profilephoto" src="{{profiles.avatar_url}}" alt="profile photo">
+    </div>
+
+    <div class="card col-md-6">
+        <p>Full-name: {{profiles.name}}</p>
+        <p>User-name: {{profiles.login}}</p>
+        <p>Email Address : {{profiles.email}}</p>
+        <p>User Bio: {{profiles.bio}}</p>
+        <p>User location: {{profiles.location}}</p>
+        <p>Works at: {{profiles.company}}</p>
+        <p><a href="{{profiles.blog}}">Blogs</a></p>
+        <p>Active github user since : {{profiles.created_at}}</p>
+        <p><a routerLink="/repos">Click to view repos</a></p>
+
+
+    </div>
 </div>
