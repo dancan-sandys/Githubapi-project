@@ -3,6 +3,7 @@ import { ProfileFinderService } from '../profile-finder.service';
 import { HttpClient } from '@angular/common/http'
 import { ReposfinderService } from '../reposfinder.service'
 import { UserProfile } from '../user-profile'
+import { Repos } from '../repos'
 
 @Component({
   selector: 'app-profile',
@@ -18,6 +19,8 @@ export class ProfileComponent implements OnInit {
   public repos: any;
 
   Profiles:UserProfile = (this.profiles.login, this.profiles.name, this.profiles.company, this.profiles.email, this.profiles.location, this.profiles.created_at, this.profiles.email)
+
+  Repos:Repos = (this.repos);
 
   search(searchterm) {
     if (searchterm != '') {

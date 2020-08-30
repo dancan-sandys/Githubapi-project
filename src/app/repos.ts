@@ -1,8 +1,8 @@
 export class Repos {
 
-name:any;
-avatar:any;
-Company:any;
+constructor(public Repos:any){
+
+}
 
 
 }
