@@ -11,12 +11,12 @@ export class ReposComponent implements OnInit {
   repos:any;
 
   constructor( private githubRepos: ReposfinderService) { 
-    this.githubRepos.getRepositories().subscribe((response:any) => this.repos = response)
   }
 
 
 
   ngOnInit() {
+    this.githubRepos.getRepositories.subscribe((response:any) => this.repos = response)
   }
 
 }

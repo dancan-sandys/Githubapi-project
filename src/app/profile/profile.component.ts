@@ -12,7 +12,6 @@ import { Repos } from '../repos'
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private githubProfiles: ProfileFinderService, private http: HttpClient, private githubRepos: ReposfinderService) { }
 
   public profiles: any = {};
 
@@ -22,20 +21,14 @@ export class ProfileComponent implements OnInit {
 
   Repos: Repos = (this.repos);
 
-  search(searchterm) {
-    if (searchterm != '') {
-      this.githubProfiles.getGithub(searchterm).subscribe((response: {}) => { console.log(response); this.profiles = response; })
-      this.githubRepos.getRepos(searchterm)
-
-    }
-
-    else {
-      this.githubProfiles.getGithub(`dancan-sandys`).subscribe((response: {}) => { console.log(response); this.profiles = response })
-
-    }
+  constructor(private githubProfiles: ProfileFinderService, private http: HttpClient, private githubRepos: ReposfinderService) { 
   }
 
+
+ 
+
   ngOnInit() {
+    this.githubProfiles.getProfile.subscribe((response) => {this.profiles = response})
 
   }
 
