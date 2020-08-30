@@ -11,6 +11,7 @@
             <p class="panel-heading">Email Address: {{profiles.email}}</p>
             <p class="panel-heading">Location: {{profiles.location}}</p>
             <p class="panel-heading">Github user since: {{profiles.created_at}}</p>
+            <p class="panel-heading">{{profiles.login}} has {{profiles.created_at|TimeCountPipe}} hours of github experience.</p>
         </div>
 
         <div *ngIf='profiles.hireable'>
