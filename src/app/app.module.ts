@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileFinderService } from './profile-finder.service'
 import { HttpClientModule } from '@angular/common/http'
+import {  ReposComponent } from './repos/repos.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent
+    ProfileComponent,
+    ReposComponent
   ],
   imports: [
     BrowserModule,

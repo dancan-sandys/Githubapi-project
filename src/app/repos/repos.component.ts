@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-
-
+import { Component, OnInit } from '@angular/core';
+import { ReposfinderService } from  '../reposfinder.service'
 
 @Component({
   selector: 'app-repos',
@@ -9,9 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ReposComponent implements OnInit {
 
-  constructor() { }
+  repos:any;
 
-  ngOnInit(): void {
+  constructor( private githubRepos: ReposfinderService) { 
+    this.githubRepos.getRepositories().subscribe((response:any) => this.repos = response)
+  }
+
+
+
+  ngOnInit() {
   }
 
 }
