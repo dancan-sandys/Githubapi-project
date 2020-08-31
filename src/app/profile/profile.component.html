@@ -3,14 +3,14 @@
         <img class="profilephoto" src="{{profiles.avatar_url}}" alt="profile photo">
     </div>
 
-    <div class="card col-md-6">
+    <div class="card col-md-5 profiledetails">
         <p>Full-name: {{profiles.name}}</p>
         <p>User-name: {{profiles.login}}</p>
         <p>Email Address : {{profiles.email}}</p>
         <p>User Bio: {{profiles.bio}}</p>
         <p>User location: {{profiles.location}}</p>
         <p>Works at: {{profiles.company}}</p>
-        <p><a href="{{profiles.blog}}">Blogs</a></p>
+        <p><a href="{{profiles.blog}}" target="_blank">Blogs</a></p>
         <p>Active github user since : {{profiles.created_at.slice(0,10)}}</p>
         <p><a routerLink="/repos">Click to view repos</a></p>
 

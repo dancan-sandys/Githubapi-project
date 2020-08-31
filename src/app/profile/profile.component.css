@@ -16,4 +16,11 @@
 
 .profilephoto {
     border-radius: 100%;
+    margin-left: 10%;
+}
+
+.profiledetails {
+    padding: 5%;
+    height: 70vh;
+    width: 10hh;
 }

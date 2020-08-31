@@ -1,9 +1,17 @@
-<p>
-    <a routerLink="/profile">Back to profile</a>
-</p>
+<div>
+    <h5>Enter username Above to search for repos</h5>
+</div>
+
+
 
 <div class="repos">
+    <p>
+        <a routerLink="/profile">Back to profile</a>
+    </p>
+
     <div class='card' SearchButtonResizingDirective *ngFor='let repo of repos'>
         <p>{{repo.name}}</p>
+        <p>{{repo.description}}</p>
+        <a href="{{repo.html_url}}" target="_blank"><button>Inspect Repo</button></a>
     </div>
 </div>
