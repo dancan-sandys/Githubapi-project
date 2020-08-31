@@ -6,3 +6,12 @@ h5 {
     text-align: center;
     margin-top: 0;
 }
+
+.repo {
+    margin: 2%;
+    padding: 1%;
+}
+
+.repoinspect {
+    text-align: right;
+}

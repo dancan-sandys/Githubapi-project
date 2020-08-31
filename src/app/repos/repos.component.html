@@ -9,9 +9,11 @@
         <a routerLink="/profile">Back to profile</a>
     </p>
 
-    <div class='card' SearchButtonResizingDirective *ngFor='let repo of repos'>
+    <div class='card repo' SearchButtonResizingDirective *ngFor='let repo of repos'>
         <p>{{repo.name}}</p>
-        <p>{{repo.description}}</p>
-        <a href="{{repo.html_url}}" target="_blank"><button>Inspect Repo</button></a>
+        <p *ngIf='repo.description'>Description: {{repo.description}}</p>
+        <div class=" repoinspect">
+            <a href="{{repo.html_url}}" target="_blank"><button class="btn-success" >Inspect Repo</button></a>
+        </div>
     </div>
 </div>
