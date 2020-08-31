@@ -9,7 +9,7 @@
         <a routerLink="/profile"><button class="btn-primary" > Back to profiles </button></a>
     </p>
 
-    <div class='card repo' SearchButtonResizingDirective *ngFor='let repo of repos'>
+    <div class='card repo' appHover *ngFor='let repo of repos'>
         <h4>{{repo.name}}</h4>
         <p *ngIf='repo.description'> <strong>Description:</strong> {{repo.description}}</p>
         <div class=" repoinspect">

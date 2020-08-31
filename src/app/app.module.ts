@@ -8,6 +8,7 @@ import { ProfileFinderService } from './profile-finder.service'
 import { HttpClientModule } from '@angular/common/http'
 import {  ReposComponent } from './repos/repos.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HoverDirective } from './hover.directive';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProfileComponent,
     ReposComponent,
     NavbarComponent,
+    HoverDirective,
   
   ],
   imports: [
