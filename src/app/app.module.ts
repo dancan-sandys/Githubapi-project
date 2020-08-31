@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http'
 import {  ReposComponent } from './repos/repos.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HoverDirective } from './hover.directive';
+import { DateslicePipe } from './dateslice.pipe';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { HoverDirective } from './hover.directive';
     ReposComponent,
     NavbarComponent,
     HoverDirective,
+    DateslicePipe,
   
   ],
   imports: [
