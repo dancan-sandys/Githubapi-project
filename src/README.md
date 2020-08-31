@@ -8,7 +8,7 @@
 #### By **Dancan Sandys Oruko**
 
 ## Description
-This is App enables you, as the user, to search for a github user profile, find his/her details such as email, place of work and a list of repos the person has worked on. It also allows you to navigate into any of the repos you wish to look into further.
+This is App enables you, as the user, to search for a github user profile, find his/her details such as email, place of work and a list of repos the person has worked on. It also allows you to navigate into any of the repos you wish to look into further.One can also view the number of hours of experience the user has in github, wether or not he/she is available for hire and the people following him/her. One can also acces the persons blog if the person has one which will be enable by a blog button incase that paricular person has a blog.
 ## live link
 Here is a live link to the site: https://dancan-sandys.github.io/Githubapi-project/
 
