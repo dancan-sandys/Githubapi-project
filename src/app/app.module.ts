@@ -10,6 +10,7 @@ import {  ReposComponent } from './repos/repos.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HoverDirective } from './hover.directive';
 import { DateslicePipe } from './dateslice.pipe';
+import { HourcountPipe } from './hourcount.pipe';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { DateslicePipe } from './dateslice.pipe';
     NavbarComponent,
     HoverDirective,
     DateslicePipe,
+    HourcountPipe,
   
   ],
   imports: [

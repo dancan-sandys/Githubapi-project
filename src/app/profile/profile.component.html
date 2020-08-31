@@ -24,6 +24,7 @@
             <a href="{{profiles.blog}}" target="_blank"> <button class="btn-info"> Blogs </button></a>
         </p>
         <p><strong>Active github user since: </strong> {{profiles.created_at|dateslice}}</p>
+        <p><strong>{{profiles.login}} has </strong> {{profiles.created_at|hourcount}} hours of github experience</p>
         <p>
             <a routerLink="/repos"> <button class="btn-success"> Click to view repos </button></a>
         </p>
