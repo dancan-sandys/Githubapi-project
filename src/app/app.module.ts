@@ -8,7 +8,7 @@ import { ProfileFinderService } from './profile-finder.service'
 import { HttpClientModule } from '@angular/common/http'
 import {  ReposComponent } from './repos/repos.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { TimeCountPipe } from './time-count.pipe'
+
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { TimeCountPipe } from './time-count.pipe'
     ProfileComponent,
     ReposComponent,
     NavbarComponent,
-    TimeCountPipe
+  
   ],
   imports: [
     BrowserModule,

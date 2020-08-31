@@ -16,7 +16,7 @@ export class ReposComponent implements OnInit {
 
 
   ngOnInit() {
-    this.githubRepos.getRepositories.subscribe((response:any) => this.repos = response)
+    this.githubRepos.getRepositories.subscribe((response:any) => this.repos = response, (error) => console.log(`An error occured`))
   }
 
 }

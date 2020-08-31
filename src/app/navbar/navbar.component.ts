@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProfileFinderService } from '../profile-finder.service';
 import { HttpClient } from '@angular/common/http'
 import { ReposfinderService } from '../reposfinder.service'
+import { SearchButtonResizingDirective } from '../search-button-resizing.directive'
 import { UserProfile } from '../user-profile'
 import { Repos } from '../repos'
 

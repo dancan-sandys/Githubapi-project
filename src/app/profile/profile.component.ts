@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProfileFinderService } from '../profile-finder.service';
 import { Subscription } from 'rxjs';
-import {TimeCountPipe } from '../time-count.pipe'
+
+import  'rxjs/add/operator/toPromise';
 
 @Component({
   selector: 'app-profile',
@@ -21,7 +22,8 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    this.subscription = this.findProfile.getProfile.subscribe((response) => { this.profiles = response; console.log(response); console.log(`Hello`, this.profiles) })
+    this.subscription = this.findProfile.getProfile
+    .subscribe((response) => { this.profiles = response; console.log(response); console.log(`Hello`, this.profiles) })
 
   }
 
