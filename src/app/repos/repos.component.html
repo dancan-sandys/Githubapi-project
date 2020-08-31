@@ -6,12 +6,12 @@
 
 <div class="repos">
     <p>
-        <a routerLink="/profile">Back to profile</a>
+        <a routerLink="/profile"><button class="btn-primary" > Back to profiles </button></a>
     </p>
 
     <div class='card repo' SearchButtonResizingDirective *ngFor='let repo of repos'>
-        <p>{{repo.name}}</p>
-        <p *ngIf='repo.description'>Description: {{repo.description}}</p>
+        <h4>{{repo.name}}</h4>
+        <p *ngIf='repo.description'> <strong>Description:</strong> {{repo.description}}</p>
         <div class=" repoinspect">
             <a href="{{repo.html_url}}" target="_blank"><button class="btn-success" >Inspect Repo</button></a>
         </div>

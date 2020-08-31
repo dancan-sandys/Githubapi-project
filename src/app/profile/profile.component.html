@@ -1,18 +1,34 @@
 <div class="row" *ngIf='profiles.login'>
     <div class="col-md-6">
         <img class="profilephoto" src="{{profiles.avatar_url}}" alt="profile photo">
+
+
+
     </div>
 
     <div class="card col-md-5 profiledetails">
-        <p>Full-name: {{profiles.name}}</p>
-        <p>User-name: {{profiles.login}}</p>
-        <p>Email Address : {{profiles.email}}</p>
-        <p>User Bio: {{profiles.bio}}</p>
-        <p>User location: {{profiles.location}}</p>
-        <p>Works at: {{profiles.company}}</p>
-        <p><a href="{{profiles.blog}}" target="_blank">Blogs</a></p>
-        <p>Active github user since : {{profiles.created_at.slice(0,10)}}</p>
-        <p><a routerLink="/repos">Click to view repos</a></p>
+
+        <ul class="following">
+            <li><button class="btn-primary"> {{profiles.followers}} Followers </button></li>
+            <li><button class="btn-info">Following {{profiles.following}}</button></li>
+            <li><button class="btn-success">{{profiles.public_repos}} Public Repos</button></li>
+        </ul>
+
+        <p> <strong> Full-name: </strong> {{profiles.name}}</p>
+        <p> <strong> User-name: </strong> {{profiles.login}}</p>
+        <p> <strong>Email Address: </strong> {{profiles.email}}</p>
+        <p><strong>User Bio: </strong> {{profiles.bio}}</p>
+        <p><strong>User location: </strong> {{profiles.location}}</p>
+        <p><strong>Works at:</strong> {{profiles.company}}</p>
+        <p>
+            <a href="{{profiles.blog}}" target="_blank"> <button class="btn-info"> Blogs </button></a>
+        </p>
+        <p><strong>Active github user since: </strong> {{profiles.created_at.slice(0,10)}}</p>
+        <p>
+            <a routerLink="/repos"> <button class="btn-success"> Click to view repos </button></a>
+        </p>
+
+
 
 
     </div>

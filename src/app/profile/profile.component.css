@@ -20,7 +20,24 @@
 }
 
 .profiledetails {
-    padding: 5%;
-    height: 70vh;
+    padding: 3%;
+    height: 75vh;
     width: 10hh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    border-radius: 5px;
+}
+
+.following {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.following li {
+    margin: 1%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

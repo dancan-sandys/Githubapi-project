@@ -1,0 +1,9 @@
+router-outlet {
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+}
+
+app-navbar {
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+}
