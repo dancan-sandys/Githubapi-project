@@ -15,6 +15,9 @@ export class NavbarComponent implements OnInit {
 
   constructor(private githubProfiles: ProfileFinderService, private http: HttpClient, private githubRepos: ReposfinderService) { }
 
+  profiles: any;
+  Found:boolean;
+
   search(searchterm) {
 
     this.githubProfiles.getGithub(searchterm)
@@ -23,6 +26,10 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.githubProfiles.getProfile
+      .subscribe((response) => { this.profiles = response; console.log(response); console.log(`Hello`, this.profiles) })
+
+    this.Found = this.githubProfiles.found
   }
 
 }

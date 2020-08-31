@@ -15,12 +15,14 @@ export class ProfileFinderService {
   
   getProfile = this.Profiles.asObservable();
 
+  found:boolean = true;
+
+
   getGithub(searchName) {
     return this.http.get(`https://api.github.com/users/${searchName}?access_token=${environment.accesstocken}`)
-      .subscribe((responses:any) => this.Profiles.next(responses))
+      .subscribe((responses:any) =>{ this.Profiles.next(responses); if (responses.login){this.found = true}})
+
+      
   }
-
-
-
 
 }
