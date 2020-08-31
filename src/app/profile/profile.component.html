@@ -1,3 +1,5 @@
+<h4 *ngIf='!profiles.login'>Enter username above to search profile</h4>
+
 <div class="row" *ngIf='profiles.login'>
     <div class="col-md-6">
         <img class="profilephoto" src="{{profiles.avatar_url}}" alt="profile photo">

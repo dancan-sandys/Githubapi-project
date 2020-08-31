@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HoverDirective } from './hover.directive';
 import { DateslicePipe } from './dateslice.pipe';
 import { HourcountPipe } from './hourcount.pipe';
+import { ErrorComponent } from './error/error.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HourcountPipe } from './hourcount.pipe';
     HoverDirective,
     DateslicePipe,
     HourcountPipe,
+    ErrorComponent,
   
   ],
   imports: [
