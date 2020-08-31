@@ -14,17 +14,19 @@
             <li><button class="btn-success">{{profiles.public_repos}} Public Repos</button></li>
         </ul>
 
-        <p> <strong> Full-name: </strong> {{profiles.name}}</p>
-        <p> <strong> User-name: </strong> {{profiles.login}}</p>
-        <p> <strong>Email Address: </strong> {{profiles.email}}</p>
-        <p><strong>User Bio: </strong> {{profiles.bio}}</p>
-        <p><strong>User location: </strong> {{profiles.location}}</p>
-        <p><strong>Works at:</strong> {{profiles.company}}</p>
-        <p>
+        <p *ngIf='profiles.name'> <strong> Full-name: </strong> {{profiles.name}}</p>
+        <p *ngIf='profiles.login'> <strong> User-name: </strong> {{profiles.login}}</p>
+        <p *ngIf='profiles.email'> <strong>Email Address: </strong> {{profiles.email}}</p>
+        <p *ngIf='profiles.bio'><strong>User Bio: </strong> {{profiles.bio}}</p>
+        <p *ngIf='profiles.location'><strong>User location: </strong> {{profiles.location}}</p>
+        <p *ngIf='profiles.company'><strong>Works at:</strong> {{profiles.company}}</p>
+        <p *ngIf='profiles.blog'>
             <a href="{{profiles.blog}}" target="_blank"> <button class="btn-info"> Blogs </button></a>
         </p>
         <p><strong>Active github user since: </strong> {{profiles.created_at|dateslice}}</p>
-        <p><strong>{{profiles.login}} has </strong> {{profiles.created_at|hourcount}} hours of github experience</p>
+        <p><strong>{{profiles.login}} </strong> has <em>{{profiles.created_at|hourcount}} hours </em> of github experience</p>
+        <p><strong>Status: </strong> <em *ngIf='profiles.login'>Available for hire</em><em *ngIf='profiles.login'>Currently not available for hire</em></p>
+
         <p>
             <a routerLink="/repos"> <button class="btn-success"> Click to view repos </button></a>
         </p>

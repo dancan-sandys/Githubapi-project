@@ -8,7 +8,7 @@ import { ElementRef } from '@angular/core'
 export class HoverDirective {
 
   @HostListener("mouseover") onhover() {
-    this.el.nativeElement.style.backgroundColor = 'gray'
+    this.el.nativeElement.style.backgroundColor = '#73c2fb'
   }
 
   @HostListener("mouseout") onunhover() {

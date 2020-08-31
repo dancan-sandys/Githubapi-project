@@ -1,2 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Courgette&display=swap');
+body {
+    overflow-x: hidden;
+    background-color: cornsilk;
+}
